@@ -1,0 +1,33 @@
+body {
+	background:url("../images/parking-velo-LLA.jpg");
+	background-size : cover;
+	margin : 10% 10% 10% 10%;
+	color:white;
+	font-size:18px;
+}
+
+
+h1 {
+    text-align:center;
+	font-family:Impact,fantasy;
+	background:linear-gradient(to right, #ffcf33,#ff4833);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;}
+
+div {
+	background:#000;
+	opacity:0.8;
+	border-radius: 20px;
+	padding:2%;
+}
+
+input[type="submit"]
+{
+	display: block;
+	margin: auto;
+	width: 100px;
+    line-height: 40px;
+    padding: 0 10px;
+    color: #000;
+	border-radius: 20px;
+}
