@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link href="../css/style.css" rel="stylesheet">
+		<script type="text/javascript" src="../js/Verifications.js"></script>
+		<title>Sondage sur les mobilités pendulaires au lycée Louis Armand</title>
+	</head>
+	
+	<body>
+		<p align="center"><img height="30%" width="30%" src="../images/LLA_logo.jpg" alt="Logo Lycée Louis Armand"></p>
+		<h1>Sondage sur les mobilités pendulaires au lycée Louis Armand</h1>
+		<div>
+		<p>Dans le cadre de la Convention lycéenne pour le climat mise en oeuvre dans notre établissement, la classe de seconde 4 et le groupe de spécialité 
+		de terminale NSI réalisent un sondage sur les mobilités au lycée Louis Armand. Ce sondage est nominatif.</p>
+		<form method="POST" action="traitement.php">
+			<ol>
+				<li>
+					<p>Veuillez indiquer vos noms et prénoms :</p>
+					<label for="nom">Nom : </label>
+					<input type="text" id="nom" name="nom" required> 
+					<label for="prenom">Prénom : </label>
+					<input type="text" id="prenom" name="prenom" required>
+				</li>
+				<li>
+					<p>Êtes-vous?</p>
+					<select required>
+						<option value="eleve">&Eacutelève</option>
+						<option value="enseignant">Enseignant</option>
+						<option value="personnel">Personnel de l'établissement</option>
+					</select>
+				</li>
+				<li>
+					<p>Où habitez-vous?</p>
+					<select required>
+						<option value="andilly">Andilly</option>
+						<option value="eaubonne">Eaubonne</option>
+						<option value="ermont">Ermont</option>
+						<option value="plessis">Le Plessis-Bouchard</option>
+						<option value="margency">Margency</option>
+						<option value="montlignon">Montlignon</option>
+						<option value="montmorency">Montmorency</option>
+						<option value="st-prix">St Prix</option>
+						<option value="autre">Autre</option>
+					</select>
+				</li>
+				<li>
+					<p>Donner votre adresse précise (numéro et nom de rue)</p>
+					<p>N° :<input type="text" name="numero_rue">   Rue :<input type="text" name="nom_rue"></p>
+				</li>
+				<li>
+					<p>Quel moyen de transport utilisez-vous le plus souvent pour vous rendre au lycée?</p>
+					<select required>
+						<option value="bus">Bus ou transport en commun</option>
+						<option value="voiture">Voiture</option>
+						<option value="scooter">Scooter ou moto</option>
+						<option value="velo">Vélo</option>
+						<option value="trotinette">Trotinette ou skateboard</option>
+						<option value="pied">&Agrave pied</option>
+					</select>
+				</li>
+				<li>
+					<p>En moyenne, combien de temps dure le trajet entre votre domicile et le lycée ?</p>
+					<select required>
+						<option value="<5">Moins de 5 min</option>
+						<option value="5-15">Entre 5 et 15 min</option>
+						<option value="15-30">Entre 15 et 30 min</option>
+						<option value="30-45">Entre 30 et 45 min</option>
+						<option value="45-60">Entre 45 et 1 heure</option>
+						<option value=">60">Plus d'1 heure</option>
+					</select>
+				</li>
+				<li>
+					<p>Si vous venez au lycée à vélo, trottinette ou skateboard, utilisez-vous les pistes cyclables ?</p>
+					<input type="radio" id="oui" name="pistes">
+					<label for="oui">Oui</label><br/>
+					<input type="radio" id="non" name="pistes">
+					<label for="non">Non</label><br/>
+				</li>
+				<li>
+					<p>Avez-vous déjà entendu parler des « modes de transports doux », c’est-à-dire non motorisés et/ou ne générant pas de pollution ?</p>
+					<input type="radio" id="oui" name="mobilites" required>
+					<label for="oui">Oui</label><br/>
+					<input type="radio" id="non" name="mobilites" required>
+					<label for="non">Non</label><br/>
+				</li>
+				<li>
+					<p>Si vous n’utilisez pas de modes de transports doux, pour quelles raisons ? <strong>(3 réponses possibles)</strong></p>
+					<fieldset name="raisons">
+						<input type="checkbox" id="materiel" name="raisons" value="materiel" OnClick="VerifMax(this.name)">
+						<label for="materiel">le matériel (vous ne possédez pas de moyens de transports doux...)</label><br/>
+						<input type="checkbox" id="distance" name="raisons" value="distance" OnClick="VerifMax(this.name)">
+						<label for="distance">la distance / la durée (vous habitez trop loin)</label><br/>
+						<input type="checkbox" id="meteo" name="raisons" value="meteo" OnClick="VerifMax(this.name)">
+						<label for="meteo">la météo (pluie, froid…)</label><br/>
+						<input type="checkbox" id="effort" name="raisons" value="effort" OnClick="VerifMax(this.name)">
+						<label for="effort">l’effort physique (vous n’aimez pas l’effort, le trajet est pentu...)</label><br/>
+						<input type="checkbox" id="securite" name="raisons" value="securite" OnClick="VerifMax(this.name)">
+						<label for="securite">la sécurité (le trajet n’est pas sécurisé pour les moyens de transports non motorisés...)</label><br/>
+						<input type="checkbox" id="autres" name="raisons" value="autres" OnClick="VerifMax(this.name)">
+						<label for="autres">autres raisons. Précisez :</label> <input type="text"><br/>
+					</fieldset>
+				</li>
+				<li>
+					<p>Quelles mesures pourraient vous inciter à utiliser (davantage) des modes de transports doux ?<strong>(3 réponses possibles)</strong></p>
+					<fieldset name="mesures">
+						<input type="checkbox" id="pistes" name="mesures" value="pistes" OnClick="VerifMax(this.name)">
+						<label for="pistes">la création de pistes cyclables</label><br/>
+						<input type="checkbox" id="routes" name="mesures" value="routes" OnClick="VerifMax(this.name)">
+						<label for="routes">l’amélioration des routes</label><br/>
+						<input type="checkbox" id="v-lib" name="mesures" value="v_lib" OnClick="VerifMax(this.name)">
+						<label for="v_lib">la mise en place d’un système de vélos en libre-service</label><br/>
+						<input type="checkbox" id="parking" name="mesures" value="parking" OnClick="VerifMax(this.name)"">
+						<label for="parking">l’agrandissement du parking à vélos du lycée</label><br/>
+						<input type="checkbox" id="campagne" name="mesures" value="campagne" OnClick="VerifMax(this.name)">
+						<label for="campagne">le lancement d’une campagne d’information sur les avantages de la mobilité douce</label><br/>
+						<input type="checkbox" id="aides" name="mesures" value="aides" OnClick="VerifMax(this.name)">
+						<label for="aides">des aides financières pour vous aider à vous doter d’un moyen de transport doux</label><br/>
+					</fieldset>
+				</li>
+			</ol>
+			<input  type="submit" class="submit" value="Envoyer" >
+		</form>
+		</div>
+	</body>
+</html>
