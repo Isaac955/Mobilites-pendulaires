@@ -1,11 +1,13 @@
 # Mobilité pendulaires
+Le but de ce projet était d'étudier les mobilités pendulaires de tous les acteurs du Lycée Louis Armand à Eaubonne (élèves, enseignants et personnels).
 
-# 1. Conception du formulaire en HTML/CSS/JS
+
+# 1. Conception du formulaire
 - Créez un formulaire en HTML du Lycée Louis Armand (à Eaubonne) pour collecter les données nécessaires : commune de résidence, statut (élève, enseignant, personnel) & moyen de transport utilisé.
-- CSS pour styliser le formulaire et le rendre convivial.
+- CSS pour styliser le formulaire et le rendre + convivial.
 - JavaScript pour valider les entrées utilisateur et améliorer l'expérience utilisateur.
 
-# 2. Création de la base de données SQLite3 en Python
+# 2. Création de la base de données
 - Utilisation de la library SQLite3 de Python pour créer la base de données
 - Création d'une table pour stocker les réponses au formulaire (commune de résidence, statut, moyen de transport).
 - Programmation des scripts Python pour importer les résultats du formulaire dans la base de données depuis des fichiers CSV
