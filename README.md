@@ -1,5 +1,3 @@
-# Mobilites pendulaires
-
 # Objectifs
 Etudier les mobilités pendulaires de tous lesacteurs du lycée Louis Armand à Eaubonne (élèves,enseignants et personnels)
 
