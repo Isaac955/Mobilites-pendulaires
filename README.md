@@ -1,5 +1,5 @@
 # Mobilité pendulaires
-Le but de ce projet était d'étudier les mobilités pendulaires de tous les acteurs du Lycée Louis Armand à Eaubonne (élèves, enseignants et personnels).
+Le but de ce projet était d'étudier les mobilités pendulaires (déplacement domicile-travail) de tous les acteurs du Lycée Louis Armand à Eaubonne (élèves, enseignants et personnels).
 
 
 # 1. Conception du formulaire
