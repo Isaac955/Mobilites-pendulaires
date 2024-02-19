@@ -3,7 +3,7 @@ Le but de ce projet était d'étudier les mobilités pendulaires (déplacement d
 
 
 # 1. Conception du formulaire
-- Créez un formulaire en HTML du Lycée Louis Armand (à Eaubonne) pour collecter les données nécessaires : commune de résidence, statut (élève, enseignant, personnel) & moyen de transport utilisé.
+- Création un formulaire en HTML du Lycée Louis Armand (à Eaubonne) pour collecter les données nécessaires : commune de résidence, statut (élève, enseignant, personnel) & moyen de transport utilisé.
 - CSS pour styliser le formulaire et le rendre + convivial.
 - JavaScript pour valider les entrées utilisateur et améliorer l'expérience utilisateur.
 
